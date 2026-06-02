@@ -1,11 +1,15 @@
 
 
-- Hi There👋,I'm Megha Shyam, I like experimenting with data to find 99 ways not to make it work, the 100th is usually the charm.
-- 🌱 I’m currently a CS graduate student at the university of cincinnati, previously I worked at Samsung for 2 years.
-- 👀 I am passionate about Deep Reinforcement Learning and Transformer based Models in. I am actively looking for opportunities.
-- 📫 How to reach me: **megk2k18@gmail.com**.
-- 🎶 In my free time, I switch from neural nets to guitar frets and quiet the noise with meditation.
+# Hi There👋,I'm Megha Shyam
 
+SDE with 2+ years at Samsung. I'm now building ML systems from scratch.
+I like opening the most mysterious black box people use this century.
+
+## Stack
+Python · PyTorch · HuggingFace · Weights & Biases · Ollama · LangChain · PEFT
+
+## Currently
+Open to full-time ML engineering roles
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
