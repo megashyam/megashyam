@@ -11,6 +11,8 @@ Raw JSON to deployed API, end to end from scratch. No LangChain. No LlamaIndex.
 Hybrid search (E5 + BM25 + RRF), 4-bit NF4 inference, zero frameworks.
 MRR@5: 0.773 · Hit@5: 1.000 · 12 cities · 47 queries
 
+PitchPulse — A live football analytics engine for the 2026 World Cup, built entirely from scratch. No LangChain. No LangGraph. No LlamaIndex. Vectorized Monte Carlo tournament simulation, hybrid (dense + BM25) retrieval over Weaviate, local-first LLM inference via Ollama with Groq fallback. 5 statistical models · 50k sims in 0.70s · 7 async workers · 48 teams
+
 Currently open to full-time ML roles
 
 Feel free to reach me at: [megh2k18@gmail.com](megh2k18@gmail.com)
