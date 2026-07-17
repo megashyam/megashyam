@@ -8,7 +8,8 @@ Ex-Samsung SWE, now building ML systems from scratch.
 
 ## What I'm building
 
-**[RezRag](https://yelp-restaurant-rag.vercel.app)** —  A Production RAG on the Yelp dataset.
+ 
+### [RezRAG](https://github.com/your-username/rezrag) — Production RAG on the Yelp dataset
 Raw JSON to deployed API, end to end from scratch with zero RAG frameworks (no LangChain,
 no LlamaIndex)
 
