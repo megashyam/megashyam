@@ -1,19 +1,50 @@
 
 
-# Hi There👋, I'm Megha Shyam
+# Hi There, I'm Megha Shyam 👋
+
+Ex-Samsung SWE, now building ML systems from scratch.
 
 2+ years building production systems at Samsung. I build from scratch because abstractions hide the interesting parts.
 
 ## What I'm building
 
 **[RezRag](https://yelp-restaurant-rag.vercel.app)** —  A Production RAG on the Yelp dataset.
-Raw JSON to deployed API, end to end from scratch. No LangChain. No LlamaIndex.
-Hybrid search (E5 + BM25 + RRF), 4-bit NF4 inference, zero frameworks.
-MRR@5: 0.773 · Hit@5: 1.000 · 12 cities · 47 queries
+Raw JSON to deployed API, end to end from scratch with zero RAG frameworks (no LangChain,
+no LlamaIndex)
 
-PitchPulse — A live football analytics engine for the 2026 World Cup, built entirely from scratch. No LangChain. No LangGraph. No LlamaIndex. Vectorized Monte Carlo tournament simulation, hybrid (dense + BM25) retrieval over Weaviate, local-first LLM inference via Ollama with Groq fallback. 5 statistical models · 50k sims in 0.70s · 7 async workers · 48 teams
+- **Hybrid retrieval**: E5-large-v2 dense embeddings + BM25Okapi sparse + Reciprocal Rank Fusion
+- **Reranking**: CrossEncoder reranking, confirmed live in production
+- **Inference**: Groq (Qwen2.5-32B) in prod, local Qwen2.5-3B NF4 quantization for dev (2.2GB VRAM, RTX 3060, ~11.8 tok/sec)
+- **Stack**: FastAPI microservices, Next.js + Leaflet frontend, Qdrant Cloud, deployed on Modal + Vercel
 
-Currently open to full-time ML roles
+**Eval**: 47 human-labeled queries across 12 US cities. MRR@5 0.773 (95% CI [0.685, 0.854]), Hit@5 1.000, P@5 0.523, location accuracy 99.7%.
+
+ With Reranking: MRR@5 0.773
+
+ Without Reranking: MRR@5 0.737
+
+**Live**: [yelp-restaurant-rag.vercel.app](https://yelp-restaurant-rag.vercel.app)
+
+
+---
+ 
+### [PitchPulse FIFA2026](https://github.com/your-username/pitchpulse-worldcup2026) — Match intelligence for the 2026 FIFA World Cup
+Real-time tournament simulation and tactical analysis, built for the World Cup
+2026 group stage through knockout rounds.
+ 
+- **Tournament simulation**: vectorized Monte Carlo (50k sims in 0.70s) using Common Random
+  Numbers for counterfactual variance reduction
+- **Live modeling**: EWMA momentum tracking, Poisson-based in-play outcome modeling,
+  IsolationForest for narrative spike detection
+- **RAG**: Weaviate hybrid retrieval (dense + BM25) for tactical briefings
+- **Inference**: local-first via Ollama (Mistral 7B), Groq 70B fallback
+- **Architecture**: 4 independent async background workers polling Redis (counterfactual,
+  intel, momentum, narrative), FastAPI + Redis + Weaviate backend, Next.js frontend
+**118 unit tests** across 5 test files, CI via GitHub Actions.
+ 
+---
+ 
+## Currently open to full-time ML/AI engineering roles
 
 Feel free to reach me at: [megh2k18@gmail.com](megh2k18@gmail.com)
 
