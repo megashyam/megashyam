@@ -30,7 +30,7 @@ no LlamaIndex)
 
 ---
  
-### [PitchPulse FIFA2026](https://github.com/your-username/pitchpulse-worldcup2026) — Match intelligence for the 2026 FIFA World Cup
+### [PitchPulse FIFA2026](https://github.com/megashyam/PitchPulse-FIFA2026) — Match intelligence for the 2026 FIFA World Cup
 Real-time tournament simulation and tactical analysis, built for the World Cup
 2026 group stage through knockout rounds.
  
