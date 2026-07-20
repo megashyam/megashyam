@@ -15,14 +15,15 @@ no LlamaIndex)
 
 - **Hybrid retrieval**: E5-large-v2 dense embeddings + BM25Okapi sparse + Reciprocal Rank Fusion
 - **Reranking**: CrossEncoder reranking, confirmed live in production
-- **Inference**: Groq (Qwen2.5-32B) in prod, local Qwen2.5-3B NF4 quantization for dev (2.2GB VRAM, RTX 3060, ~11.8 tok/sec)
+- **Inference**: Groq (gpt-oss-20b) in prod, local Qwen2.5-3B NF4 quantization for dev (2.2GB VRAM, RTX 3060, ~11.8 tok/sec)
 - **Stack**: FastAPI microservices, Next.js + Leaflet frontend, Qdrant Cloud, deployed on Modal + Vercel
 
-**Eval**: 47 human-labeled queries across 12 US cities. MRR@5 0.773 (95% CI [0.685, 0.854]), Hit@5 1.000, P@5 0.523, location accuracy 99.7%.
+**Eval**: 47 human-labeled queries across 12 US cities.
 
- With Reranking: MRR@5 0.773
-
- Without Reranking: MRR@5 0.737
+| Strategy | MRR@5 | 95% CI | Hit@3 | Hit@5 | P@5 |
+|:---|:---|:---|:---|:---|:---|
+| Hybrid + Rerank | 0.760 | [0.678, 0.841] | 0.979 | 1.000 | 0.413 |
+| Hybrid (no rerank) | 0.639 | [0.524, 0.753] | 0.745 | 0.830 | 0.349 |
 
 **Live**: [yelp-restaurant-rag.vercel.app](https://yelp-restaurant-rag.vercel.app)
 
@@ -41,7 +42,7 @@ Real-time tournament simulation and tactical analysis, built for the World Cup
 - **Inference**: local-first via Ollama (Mistral 7B), Groq 70B fallback
 - **Architecture**: 4 independent async background workers polling Redis (counterfactual,
   intel, momentum, narrative), FastAPI + Redis + Weaviate backend, Next.js frontend
-**118 unit tests** across 5 test files, CI via GitHub Actions.
+
  
 ---
  
