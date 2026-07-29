@@ -16,7 +16,7 @@ no LlamaIndex)
 - **Hybrid retrieval**: E5-large-v2 dense embeddings + BM25Okapi sparse + Reciprocal Rank Fusion
 - **Reranking**: CrossEncoder reranking, confirmed live in production
 - **Inference**: Groq (gpt-oss-20b) in prod, local Qwen2.5-3B NF4 quantization for dev (2.2GB VRAM, RTX 3060, ~11.8 tok/sec)
-- **Stack**: FastAPI microservices, Next.js + Leaflet frontend, Qdrant Cloud, deployed on Modal + Vercel
+- **Stack**: Python, PyTorch, HuggingFace Transformers, FastAPI microservices, Qdrant Vector DB, deployed on Modal + Vercel, MLFlow
 
 **Eval**: 47 human-labeled queries across 12 US cities.
 
